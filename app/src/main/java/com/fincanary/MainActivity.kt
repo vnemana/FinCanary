@@ -24,4 +24,9 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
+
+    fun launchNewsArticles(view: View) {
+        val intent = Intent(this, NewsArticleActivity::class.java).apply{}
+        startActivity(intent)
+    }
 }

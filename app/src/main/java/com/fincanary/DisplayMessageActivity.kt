@@ -17,5 +17,7 @@ class DisplayMessageActivity : AppCompatActivity() {
         val textView = findViewById<TextView>(R.id.textView).apply {
             text = message
         }
+
+        //setContentView(R.layout.news_articles_view)
     }
 }
