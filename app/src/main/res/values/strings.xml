@@ -8,4 +8,6 @@
     <string name="button_launch_news_article_fragment">Launch New Articles</string>
     <string name="article_fragment_text">I am a text box inside the Article Fragment</string>
     <string name="headline_fragment_text">I am a text box inside the Headline fragment</string>
+    <string name="headline_button_text">Click to view Article</string>
+    <string name="button_map">Map It!</string>
 </resources>
