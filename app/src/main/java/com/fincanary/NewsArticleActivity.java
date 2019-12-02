@@ -1,8 +1,9 @@
 package com.fincanary;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.fragment.app.FragmentTransaction;
+import androidx.appcompat.app.AppCompatActivity;
 
 class NewsArticleActivity extends AppCompatActivity
     implements HeadlinesFragment.OnHeadlineClickedListener {
@@ -18,7 +19,8 @@ class NewsArticleActivity extends AppCompatActivity
 
             HeadlinesFragment firstFragment = new HeadlinesFragment();
             firstFragment.setArguments(getIntent().getExtras());
-            getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, firstFragment).commit();
+            getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,
+                    firstFragment).commit();
         }
     }
 

@@ -3,7 +3,7 @@ package com.fincanary
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.AlarmClock.EXTRA_MESSAGE
 import android.view.View
@@ -39,8 +39,9 @@ class MainActivity : AppCompatActivity() {
         val uri = Uri.parse("geo:0,0?q=" + location)
         val mapIntent = Intent(Intent.ACTION_VIEW, uri)
 
-        val activities = packageManager.queryIntentActivities(mapIntent, 0)
-        if (activities.size > 0)
-            startActivity(mapIntent)
+        val title = "View location using"
+        val chooser = Intent.createChooser(mapIntent, title)
+        if (mapIntent.resolveActivity(packageManager) != null)
+            startActivity(chooser)
     }
 }
